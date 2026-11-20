@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.duneanalytics/mcp",
+  "title": "Dune",
+  "description": "Query blockchain data on Dune: find tables, run DuneSQL, and build visualizations and dashboards.",
+  "version": "1.0.0",
+  "websiteUrl": "https://docs.dune.com/docs/agents/mcp",
+  "repository": {
+    "url": "https://github.com/duneanalytics/mcp",
+    "source": "github",
+    "id": "1465808959"
+  },
+  "icons": [
+    {
+      "src": "https://dune.com/assets/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    },
+    {
+      "src": "https://dune.com/assets/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.dune.com/mcp/v1",
+      "headers": [
+        {
+          "name": "x-dune-api-key",
+          "description": "Optional. Dune API key for headless or CI use. Leave it out to sign in with your Dune account (OAuth).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
